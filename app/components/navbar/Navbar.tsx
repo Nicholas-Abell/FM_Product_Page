@@ -1,5 +1,7 @@
 import React from "react";
 import { HiOutlineShoppingCart } from "react-icons/hi";
+import profileImg from "../../../public/images/image-avatar.png";
+import Image from "next/image";
 
 type NavbarProps = {};
 
@@ -17,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = () => {
         </ul>
         <div className="flex justify-center items-center gap-4">
           <HiOutlineShoppingCart size={25} />
-          <>icon</>
+          <Image src={profileImg} alt="profile" className="w-[28px] h-[28px]" />
         </div>
       </div>
     </nav>
