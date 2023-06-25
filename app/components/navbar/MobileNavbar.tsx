@@ -8,7 +8,7 @@ type MobileNavbarProps = {};
 
 const MobileNavbar: React.FC<MobileNavbarProps> = () => {
   return (
-    <nav className="w-full py-8 px-12 lg:hidden flex justify-between items-center">
+    <nav className="z-50 bg-white w-full py-8 px-12 lg:hidden flex justify-between items-center">
       <div className="flex justify-center items-center gap-4">
         <GiHamburgerMenu
           size={25}
