@@ -4,7 +4,7 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 
 export default function Home() {
   return (
-    <main>
+    <main className="pb-8">
       <div className="flex flex-col lg:flex-row w-full lg:p-24 gap-8">
         <Carousel />
         <div className="w-full flex flex-col justify-center gap-4 px-6">
@@ -28,9 +28,19 @@ export default function Home() {
             </div>
             <p className="text-gray-300 line-through">$250.00</p>
           </div>
-          <div className="flex items-center flex-col lg:flex-row">
-            -0+
-            <button className="bg-orange-400 text-white rounded-lg px-8 py-2 flex items-center justify-center gap-4 w-full lg:w-auto">
+          <div className="flex items-center flex-col lg:flex-row w-full gap-4">
+            <div className="grid grid-cols-3 w-full">
+              <button className="bg-gray-100 w-full text-3xl p-4 font-bold text-orange-400">
+                -
+              </button>
+              <button className="bg-gray-100 w-full text-3xl p-4 font-bold">
+                0
+              </button>
+              <button className="bg-gray-100 w-full text-3xl p-4 font-bold text-orange-400">
+                +
+              </button>
+            </div>
+            <button className="bg-orange-400 text-white text-sm rounded-lg px-8 py-4 flex items-center justify-center gap-2 xl::gap-4 w-full lg:w-auto whitespace-nowrap">
               <HiOutlineShoppingCart size={18} />
               Add to cart
             </button>
