@@ -1,8 +1,11 @@
-import Image from "next/image";
+"use client";
 import Carousel from "./components/Carousel";
 import { HiOutlineShoppingCart } from "react-icons/hi";
+import { useState } from "react";
 
 export default function Home() {
+  const [itemQuantity, setItemQuantity] = useState(0);
+
   return (
     <main className="pb-8">
       <div className="flex flex-col lg:flex-row w-full lg:p-24 gap-8">
@@ -30,13 +33,23 @@ export default function Home() {
           </div>
           <div className="flex items-center flex-col lg:flex-row w-full gap-4">
             <div className="grid grid-cols-3 w-full">
-              <button className="bg-gray-100 w-full text-3xl p-4 font-bold text-orange-400">
+              <button
+                onClick={() =>
+                  setItemQuantity((itemQuantity) => itemQuantity - 1)
+                }
+                className="bg-gray-100 w-full text-3xl p-4 font-bold text-orange-400"
+              >
                 -
               </button>
               <button className="bg-gray-100 w-full text-3xl p-4 font-bold">
-                0
+                {itemQuantity}
               </button>
-              <button className="bg-gray-100 w-full text-3xl p-4 font-bold text-orange-400">
+              <button
+                onClick={() =>
+                  setItemQuantity((itemQuantity) => itemQuantity + 1)
+                }
+                className="bg-gray-100 w-full text-3xl p-4 font-bold text-orange-400"
+              >
                 +
               </button>
             </div>
