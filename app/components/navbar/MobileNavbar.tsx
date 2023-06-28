@@ -10,14 +10,22 @@ type MobileNavbarProps = {};
 
 const MobileNavbar: React.FC<MobileNavbarProps> = () => {
   const [sideNavOpen, setSideNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    if (!sideNavOpen) {
+      document.body.style.overflow = "hidden";
+      setSideNavOpen(true);
+    } else {
+      setSideNavOpen(false), (document.body.style.overflow = "scroll");
+    }
+  };
+
   return (
     <nav className="z-30 bg-white w-full py-8 px-12 lg:hidden flex justify-between items-center">
-      {sideNavOpen && (
-        <SideNav sideNavOpen={sideNavOpen} setSideNavOpen={setSideNavOpen} />
-      )}
+      {sideNavOpen && <SideNav toggleNav={toggleNav} />}
       <div className="flex justify-center items-center gap-4">
         <GiHamburgerMenu
-          onClick={() => setSideNavOpen(true)}
+          onClick={toggleNav}
           size={25}
           className="text-gray-500 hover:cursor-pointer hover:text-black"
         />
