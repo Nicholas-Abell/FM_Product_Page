@@ -7,7 +7,7 @@ export default function Home() {
   const [itemQuantity, setItemQuantity] = useState(0);
 
   return (
-    <main className="pb-8">
+    <main>
       <div className="flex flex-col lg:flex-row w-full lg:p-24 gap-8">
         <Carousel />
         <div className="w-full flex flex-col justify-center gap-4 px-6">
@@ -34,9 +34,10 @@ export default function Home() {
           <div className="flex items-center flex-col lg:flex-row w-full gap-4">
             <div className="grid grid-cols-3 w-full">
               <button
-                onClick={() =>
-                  setItemQuantity((itemQuantity) => itemQuantity - 1)
-                }
+                onClick={() => {
+                  if (itemQuantity === 0) return;
+                  setItemQuantity((itemQuantity) => itemQuantity - 1);
+                }}
                 className="bg-gray-100 w-full text-3xl p-4 font-bold text-orange-400"
               >
                 -
