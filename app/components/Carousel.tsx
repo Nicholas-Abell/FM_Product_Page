@@ -13,11 +13,13 @@ import {
   BiSolidChevronLeftCircle,
   BiSolidChevronRightCircle,
 } from "react-icons/bi";
+import LightBox from "./LightBox";
 
 type CarouselProps = {};
 
 const Carousel: React.FC<CarouselProps> = () => {
   const [imageSlide, setImageSlide] = useState(1);
+  const [LightBoxOpen, setLightBoxOpen] = useState(false);
   const productList = [
     {
       id: 1,
@@ -50,8 +52,17 @@ const Carousel: React.FC<CarouselProps> = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center gap-4 lg:p-32">
-git      <div className="w-full relative">
+    <div className="w-full flex flex-col items-center justify-center gap-4 lg:px-40 pt-8">
+      {LightBoxOpen && (
+        <LightBox
+          imageSlide={imageSlide}
+          productList={productList}
+          selectedImage={productList[imageSlide - 1]?.image}
+          setImageSlide={setImageSlide}
+          setLightBoxOpen={setLightBoxOpen}
+        />
+      )}
+      <div className="w-full relative">
         <BiSolidChevronLeftCircle
           onClick={() => handleChevronClick(-1)}
           size={50}
@@ -62,9 +73,10 @@ git      <div className="w-full relative">
           }
         />
         <Image
+          onClick={() => setLightBoxOpen(true)}
           src={productList[imageSlide - 1]?.image}
           alt="product"
-          className="h-auto rounded-lg"
+          className="h-auto rounded-lg hover:cursor-pointer"
         />
         <BiSolidChevronRightCircle
           onClick={() => handleChevronClick(1)}
