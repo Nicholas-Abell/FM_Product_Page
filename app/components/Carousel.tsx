@@ -60,6 +60,7 @@ const Carousel: React.FC<CarouselProps> = () => {
           selectedImage={productList[imageSlide - 1]?.image}
           setImageSlide={setImageSlide}
           setLightBoxOpen={setLightBoxOpen}
+          handleChevronClick={handleChevronClick}
         />
       )}
       <div className="w-full relative">
@@ -73,7 +74,9 @@ const Carousel: React.FC<CarouselProps> = () => {
           }
         />
         <Image
-          onClick={() => setLightBoxOpen(true)}
+          onClick={() => {
+            setLightBoxOpen(true);
+          }}
           src={productList[imageSlide - 1]?.image}
           alt="product"
           className="h-auto rounded-lg hover:cursor-pointer"
