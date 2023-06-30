@@ -79,7 +79,7 @@ const Carousel: React.FC<CarouselProps> = () => {
           }}
           src={productList[imageSlide - 1]?.image}
           alt="product"
-          className="h-auto rounded-lg hover:cursor-pointer"
+          className="h-auto lg:rounded-lg hover:cursor-pointer"
         />
         <BiSolidChevronRightCircle
           onClick={() => handleChevronClick(1)}

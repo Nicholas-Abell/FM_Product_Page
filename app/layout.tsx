@@ -1,3 +1,4 @@
+import Modal from "./components/cart/Modal";
 import MobileNavbar from "./components/navbar/MobileNavbar";
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         <MobileNavbar />
+        <Modal />
         {children}
       </body>
     </html>
