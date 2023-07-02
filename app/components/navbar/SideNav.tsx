@@ -7,7 +7,7 @@ type SideNavProps = {
 
 const SideNav: React.FC<SideNavProps> = ({ toggleNav }) => {
   return (
-    <div className="absolute top-0 left-0">
+    <div className="absolute top-0 left-0 lg:hidden">
       <div className="text-gray-700 z-50 px-8 pt-4 font-bold text-2xl gap-12 fixed top-0 left-0 h-screen w-[60vw] bg-white">
         <button onClick={toggleNav} className="pb-12">
           x

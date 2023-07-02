@@ -5,7 +5,6 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import profileImg from "../../../public/images/image-avatar.png";
 import Image from "next/image";
 import SideNav from "./SideNav";
-import Modal from "../cart/Modal";
 
 type MobileNavbarProps = {};
 
