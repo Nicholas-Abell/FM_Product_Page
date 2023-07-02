@@ -1,14 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import shoeImg from "../../public/images/image-product-1.jpg";
-import shoeImgThumbnail from "../../public/images/image-product-1-thumbnail.jpg";
-import shoeImage2 from "../../public/images/image-product-2.jpg";
-import shoeImg2Thumbnail from "../../public/images/image-product-2-thumbnail.jpg";
-import shoeImg3 from "../../public/images/image-product-3.jpg";
-import shoeImg3Thumbnail from "../../public/images/image-product-3-thumbnail.jpg";
-import shoeImg4 from "../../public/images/image-product-4.jpg";
-import shoeImg4Thumbnail from "../../public/images/image-product-4-thumbnail.jpg";
+import shoeImg from "../../../public/images/image-product-1.jpg";
+import shoeImgThumbnail from "../../../public/images/image-product-1-thumbnail.jpg";
+import shoeImage2 from "../../../public/images/image-product-2.jpg";
+import shoeImg2Thumbnail from "../../../public/images/image-product-2-thumbnail.jpg";
+import shoeImg3 from "../../../public/images/image-product-3.jpg";
+import shoeImg3Thumbnail from "../../../public/images/image-product-3-thumbnail.jpg";
+import shoeImg4 from "../../../public/images/image-product-4.jpg";
+import shoeImg4Thumbnail from "../../../public/images/image-product-4-thumbnail.jpg";
 import {
   BiSolidChevronLeftCircle,
   BiSolidChevronRightCircle,
