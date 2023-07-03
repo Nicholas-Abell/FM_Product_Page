@@ -2,6 +2,7 @@
 import Carousel from "./components/carousel/Carousel";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { useState } from "react";
+import { useShoppingCart } from "./context/ShoppingCartContext";
 
 export default function Home() {
   const [itemQuantity, setItemQuantity] = useState(0);
